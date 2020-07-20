@@ -11,7 +11,7 @@ getTotalUSPositiveCase()
 // Get total US positive cases
 async function getTotalUSPositiveCase() {
     try {
-        const response = await fetch ('https://covidtracking.com/api/v1/us/current.json');
+        const response = await fetch('https://covidtracking.com/api/v1/us/current.json');
         const data = await response.json();
         return data[0].positive;
     } catch (error) {
@@ -22,7 +22,7 @@ async function getTotalUSPositiveCase() {
 // Get the date of the most recent data
 async function getCurrentDate() {
     try {
-        const response = await fetch ('https://covidtracking.com/api/v1/us/current.json');
+        const response = await fetch('https://covidtracking.com/api/v1/us/current.json');
         const data = await response.json();
         return data[0].date;
     } catch (error) {
