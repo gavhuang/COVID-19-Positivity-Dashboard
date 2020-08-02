@@ -130,8 +130,7 @@ function acronymToFullName(acronym) {
     return acronym;
 }
 
-
-// GPS coordinations of states from https://www.census.gov/geographies/reference-files/2010/geo/state-area.html
+// GPS coordinates of states from https://www.census.gov/geographies/reference-files/2010/geo/state-area.html
 function gps(acronym) {
     const coords = {
       AZ: {lat: 32.7396323, long: -86.8434593}
