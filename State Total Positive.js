@@ -30,10 +30,10 @@ getCurrentDate().then(date => {
                     });
                 });
                 
-                // Create new array of objects [{State: Positivity}...]
+                // Create new array of objects [{State: Positivity, Coords}...]
                 let data = {};
-                data[acronymToFullName(`${state.state}`)] = Number(state.positive);
-                if (gps(`${state.state}`) != undefined) {
+                data[acronymToFullName(`${state.state}`)] = state.positive;
+                if (gps(`${state.state}`) !== undefined) {
                     data.coordinates = gps(`${state.state}`);
                 }
                 nationalData.push(data);
@@ -41,7 +41,8 @@ getCurrentDate().then(date => {
         });
 
         // Delete THIS LATER
-        console.log(nationalData);
+        // This is how I'm going to get the coordinates.lat
+        console.log(nationalData[4].coordinates.lat);
 
         // Bring in Google Map API TODO
     });
